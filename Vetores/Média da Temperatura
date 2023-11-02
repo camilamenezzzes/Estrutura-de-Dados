@@ -1,0 +1,24 @@
+#Faça um procedimento que receba a temperatura média de cada mês do ano e armazene-as em
+#um vetor. Após isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima
+#da média anual, e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 –Fevereiro,
+#. . . ). Utilize dois vetores um para cada informação.
+
+tam = 12
+soma = 0
+temperatura_mensal = [int] * tam
+
+meses = [
+    "Janeiro", "Fevereiro", "Março", "Abril",
+    "Maio", "Junho", "Julho", "Agosto",
+    "Setembro", "Outubro", "Novembro", "Dezembro"
+]
+for i in range(len(temperatura_mensal)):
+  temperatura_mensal[i] = int(input("Digite a temperatura média mensal: \t"))
+  soma = soma + temperatura_mensal[i]
+
+temperatura_anual = soma/tam
+print("A média anual é:", temperatura_anual,"°C")
+
+for i in range(len(temperatura_mensal)):
+  if temperatura_mensal[i] > temperatura_anual:
+   print("As temperaturas mensais que ficaram acima da média foram:\n",meses[i],":",temperatura_mensal[i],"°C")
