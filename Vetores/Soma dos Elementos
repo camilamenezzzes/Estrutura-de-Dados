@@ -1,0 +1,28 @@
+#2 – Dado o vetor do exemplo anterior implemente o procedimento que calcule a soma dos
+#elementos do vetor.
+
+tam = 7
+vetor_numero = [int] * tam
+soma = 0
+
+for i in range(len(vetor_numero)):
+    vetor_numero[i] = int(input("Digite o valor \t"))
+
+for j in range(len(vetor_numero)):
+    print("Valor da posicao", j, ":", vetor_numero[j])
+
+valor_maior = vetor_numero[0]
+valor_menor = vetor_numero[0]
+
+for i in range(len(vetor_numero)):
+    if vetor_numero[i] > valor_maior:
+        valor_maior = vetor_numero[i]
+
+    if vetor_numero[i] < valor_menor:
+        valor_menor = vetor_numero[i]
+
+    soma = soma + vetor_numero[i]
+
+print("O maior valor e", valor_maior)
+print("O menor valor e", valor_menor)
+print("A soma dos valores do vetor e", soma)
