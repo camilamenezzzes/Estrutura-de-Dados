@@ -1,0 +1,17 @@
+#3 - Faça um programa que preenche uma matriz 4 x 4 com o produto do valor do indice da linha e da coluna de cada
+#elemento. Em seguida, imprima na tela a matriz.
+
+linha = 4
+coluna = 4
+
+matriz = [0] * linha
+
+for l in range(len(matriz)):
+  matriz[l] = [0] * coluna
+
+for l in range(len(matriz)):#ler as linhas
+  for c in range(len(matriz[l])):#ler as colunas
+    matriz[l][c] = l*c
+
+for l in range(len(matriz)):
+ print(matriz[l])
