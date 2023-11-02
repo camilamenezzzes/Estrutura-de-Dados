@@ -1,0 +1,15 @@
+#Crie um programa que lê 6 valores inteiros usando vetores e, em seguida, mostre
+#na tela os valores lidos na ordem inversa.
+
+tam = 6
+vetor_X = [int] * tam
+vetor_Y = [int] * tam
+
+for i in range(len(vetor_X)):
+  vetor_X[i] = int(input("Digite um número: \t"))
+
+for j in range(len(vetor_Y)):
+  vetor_Y[j] = vetor_X[i]
+  i = i - 1
+
+print(vetor_Y)
