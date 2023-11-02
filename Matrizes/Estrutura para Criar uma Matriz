@@ -1,0 +1,18 @@
+linha = int(input("Digite a quantidade de linhas da matriz \t"))
+coluna = int(input("Digite a quantidade de colunas da matriz \t"))
+
+matriz = [0] * linha
+
+for l in range(len(matriz)):
+  matriz[l] = [0] * coluna
+  print(matriz[l])
+
+for l in range(len(matriz)):
+  for c in range(len(matriz[l])):
+    matriz[l][c] = int(input("Digite o valor \t"))
+    #if l == c:
+      #print(matriz[l][c])
+    #if matriz[l][c]%2 == 0:
+      #print(matriz[l][c])
+for l in range(len(matriz)):
+ print(matriz[l])
