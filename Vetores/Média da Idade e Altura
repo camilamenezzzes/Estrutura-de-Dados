@@ -1,0 +1,45 @@
+#Faça um procedimento que peça a idade e a altura de 5 pessoas, armazene
+#cada informação no seu respectivo vetor. Imprima a media das idades,
+#a media das alturas, o mais novo, o mais velho, o mais alto e mais baixo.
+
+tam = 5
+vetor_idade = [int] * tam
+vetor_altura = [float] * tam
+soma_idade = 0
+soma_altura = 0
+
+for i in range(len(vetor_idade)):
+  vetor_idade[i] = int(input("Digite a idade: \t"))
+  soma_idade = soma_idade + vetor_idade[i]
+
+for i in range(len(vetor_altura)):
+   vetor_altura[i] = float(input("Digites a altura: \t"))
+   soma_altura = soma_altura + vetor_altura[i]
+
+mais_novo = vetor_idade[0]
+mais_velho = vetor_idade[0]
+
+for i in range(len(vetor_idade)):
+  if vetor_idade[i] < mais_novo:
+    mais_novo = vetor_idade[i]
+  if vetor_idade[i] > mais_velho:
+    mais_velho = vetor_idade[i]
+
+mais_baixo = vetor_altura[0]
+mais_alto = vetor_altura[0]
+
+for i in range(len(vetor_altura)):
+  if vetor_altura[i] < mais_baixo:
+    mais_baixo = vetor_altura[i]
+  if vetor_idade[i] > mais_alto:
+    mais_alto = vetor_altura[i]
+
+media_idade = soma_idade/5
+media_altura = soma_altura/5
+
+print("A idade do mais novo é:", mais_novo)
+print("A idade do mais velho é:", mais_velho)
+print("A média das idades é:", media_idade)
+print("A altura do mais baixo é:",mais_baixo)
+print("A altura do mais alto é:",mais_alto)
+print("A média das alturas é:", media_altura)
