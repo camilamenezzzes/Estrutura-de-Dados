@@ -1,0 +1,23 @@
+#1 - Dado o seguinte vetor [1,2,4,16,32,64,-128]
+# implemente um procedimento que   indique o menor e o maior elemento do vetor.
+tam = 7
+vetor_numero = [int] * tam
+
+for i in range(len(vetor_numero)):
+    vetor_numero[i] = int(input("Digite o valor \t"))
+
+for j in range(len(vetor_numero)):
+    print("Valor da posicao", j, ":", vetor_numero[j])
+
+valor_maior = vetor_numero[0]
+valor_menor = vetor_numero[0]
+
+for i in range(len(vetor_numero)):
+    if vetor_numero[i] > valor_maior:
+        valor_maior = vetor_numero[i]
+
+    if vetor_numero[i] < valor_menor:
+        valor_menor = vetor_numero[i]
+
+print("O maior valor e", valor_maior)
+print("O menor valor e", valor_menor)
