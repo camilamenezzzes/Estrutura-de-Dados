@@ -1,0 +1,62 @@
+#9-Utilize um vetor para receber a seguinte informação: Uma empresa paga seus vendedores com
+#base em comissões. O vendedor recebe R$200 por semana mais 9 por cento de suas vendas brutas
+#daquela semana. Por exemplo, um vendedor que teve vendas brutas de R$3000 em uma semana
+#recebe R$200 mais 9 por cento de R$3000, ou seja, um total de R$470. Escreva um programa
+#(usando um vetor) que determine quantos vendedores receberam salários nos seguintes intervalos
+#de valores:
+#a. R$200 - R$299
+#b. R$300 - R$399
+#c. R$400 - R$499
+#d. R$500 - R$599
+#e. R$600 - R$699
+#f. R$700 - R$799
+#g. R$800 - R$899
+#h. R$900 - R$999
+#i. R$1000 em diante
+
+tam = int(input("Quantos vendedores você deseja analisar?\t"))
+
+vendas_brutas = [int] * tam
+
+intervalo_a = 0
+intervalo_b = 0
+intervalo_c = 0
+intervalo_d = 0
+intervalo_e = 0
+intervalo_f = 0
+intervalo_g = 0
+intervalo_h = 0
+intervalo_i = 0
+
+for i in range(len(vendas_brutas)):
+  vendas_brutas[i] = int(input("Qual o valor da venda feita?\t"))
+  salario= 200 + (0.09*vendas_brutas[i])
+  print("O salário da semana é de: R$", salario)
+  if 200 <= salario <= 299:
+        intervalo_a += 1
+  elif 300 <= salario <= 399:
+        intervalo_b += 1
+  elif 400 <= salario <= 499:
+        intervalo_c += 1
+  elif 500 <= salario <= 599:
+        intervalo_d += 1
+  elif 600 <= salario <= 699:
+        intervalo_e += 1
+  elif 700 <= salario <= 799:
+        intervalo_f += 1
+  elif 800 <= salario <= 899:
+        intervalo_g += 1
+  elif 900 <= salario <= 999:
+        intervalo_h += 1
+  else:
+        intervalo_i += 1
+
+print("A quantidade de vendedores que recebeu entre R$200 - R$299 foi igual a:", intervalo_a)
+print("A quantidade de vendedores que recebeu entre R$300 - R$399 foi igual a:", intervalo_b)
+print("A quantidade de vendedores que recebeu entre R$400 - R$499 foi igual a:", intervalo_c)
+print("A quantidade de vendedores que recebeu entre R$500 - R$599 foi igual a:", intervalo_d)
+print("A quantidade de vendedores que recebeu entre R$600 - R$699 foi igual a:", intervalo_e)
+print("A quantidade de vendedores que recebeu entre R$700 - R$799 foi igual a:", intervalo_f)
+print("A quantidade de vendedores que recebeu entre R$800 - R$899 foi igual a:", intervalo_g)
+print("A quantidade de vendedores que recebeu entre R$900 - R$999 foi igual a:", intervalo_h)
+print("A quantidade de vendedores que recebeu de R$1000 em diante foi igual a:", intervalo_i)
