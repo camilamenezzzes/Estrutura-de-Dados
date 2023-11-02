@@ -1,0 +1,16 @@
+#4 - Faça um programa que leia um vetor de 8 posições e, em seguida, leia também dois valores X e
+#Y quaisquer correspondentes a duas posições no vetor. Ao final seu programa deverá escrever a
+#soma dos valores encontrados nas respectivas posições X e Y .
+tam = 8
+vetor = [int] * tam
+soma = 0
+
+for i in range(len(vetor)):
+  vetor[i] = int(input("Digite um valor: \t"))
+
+for j in range(2):
+  j = int(input("Qual posicao voce quer ler?\t"))
+  soma = soma + vetor[j]
+  print("A posicao", j, "tem valor:", vetor[j])
+
+print("A soma dos valores das posições solicitadas é: ", soma)
