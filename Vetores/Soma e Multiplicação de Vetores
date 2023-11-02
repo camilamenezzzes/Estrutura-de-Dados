@@ -1,0 +1,16 @@
+#Faça um procedimento que leia um vetor de 5 números inteiros,
+#mostre a soma, a multiplicação e os números.
+tam = 5
+lista_vetor = [int] * tam
+soma = 0
+multiplicacao = 1
+
+for i in range(len(lista_vetor)):
+  lista_vetor[i] = int(input("Digite o valor: \t"))
+  #print(i, lista_vetor[i])
+  soma = soma + lista_vetor[i]
+  multiplicacao = multiplicacao * lista_vetor[i]
+
+print(lista_vetor)
+print("Valor soma:", soma)
+print("Valor multiplicação:", multiplicacao)
