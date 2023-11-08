@@ -1,0 +1,62 @@
+#Leia duas matrizes 4 x 4 e escreva uma terceira com os maiores valores de cada posição das matrizes
+#lidas.
+from random import randint
+linha = 4
+coluna = 4
+
+lista_maiores = []
+
+matriz = [0] * linha
+
+for l in range(len(matriz)):
+  matriz[l] = [0] * coluna
+
+for l in range(len(matriz)):
+  for c in range(len(matriz[l])):
+    matriz[l][c] = randint(1,100)
+    lista_maiores.append(matriz[l][c])
+
+for l in range(len(matriz)):
+ print(matriz[l])
+
+lista_maiores.sort(reverse = True)
+print("Os maiores elementos da matriz 1 são: ")
+print(lista_maiores[0],lista_maiores[1], lista_maiores[2], lista_maiores[3], lista_maiores[4], lista_maiores[5], lista_maiores[6], lista_maiores[7])
+
+print(" ")
+
+lista_maiores2 = []
+
+matriz2 = [0] * linha
+
+for l in range(len(matriz2)):
+  matriz2[l] = [0] * coluna
+
+for l in range(len(matriz2)):
+  for c in range(len(matriz2[l])):
+    matriz2[l][c] = randint(1,100)
+    lista_maiores2.append(matriz2[l][c])
+
+for l in range(len(matriz2)):
+ print(matriz2[l])
+
+lista_maiores2.sort(reverse = True)
+print("Os maiores elementos da matriz 2 são: ")
+print(lista_maiores2[0],lista_maiores2[1], lista_maiores2[2], lista_maiores2[3], lista_maiores2[4], lista_maiores2[5], lista_maiores2[6], lista_maiores2[7])
+print("")
+
+linha1 = [lista_maiores[0],lista_maiores[1], lista_maiores[2],lista_maiores[3]]
+linha2 = [lista_maiores[4], lista_maiores[5], lista_maiores[6], lista_maiores[7]]
+linha3 = [lista_maiores2[0],lista_maiores2[1], lista_maiores2[2], lista_maiores2[3]]
+linha4 = [lista_maiores2[4], lista_maiores2[5], lista_maiores2[6], lista_maiores2[7]]
+
+print("Terceira matriz criada com os maiores numeros das outras: ")
+print("")
+
+matriz3 = [linha1,
+           linha2,
+           linha3,
+           linha4]
+
+for l in range(len(matriz3)):
+         print(matriz3[l])
