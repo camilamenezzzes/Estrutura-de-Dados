@@ -1,0 +1,52 @@
+#Dizemos que uma matriz quadrada inteira é um quadrado mágico se a soma dos elementos de cada
+#linha, a soma dos elementos de cada coluna e a soma dos elementos das diagonais principal e secundária
+#são todas iguais. Dada a matriz da questão 10 verificar se a mesma é uma quadrado mágico.
+
+from typing import List
+
+lista_1 = [8, 0, 7]
+lista_2 = [4, 5, 6]
+lista_3 = [3, 10, 2]
+matriz = [lista_1,
+          lista_2,
+          lista_3]
+
+soma_col1= 0
+soma_col2 = 0
+soma_col3 = 0
+soma_coluna = 0
+soma_diag_pr = 0
+
+
+for l in range(len(matriz)):
+    for c in range(len(matriz[l])):
+         #print(matriz[l][c], end=" ")
+
+         if l ==c :
+              soma_diag_pr = soma_diag_pr + matriz[l][c]
+         if c== 0:
+            soma_col1 = soma_col1 + matriz[l][c]
+         elif c== 1:
+            soma_col2 = soma_col2 + matriz[l][c]
+         elif c== 2:
+            soma_col3 = soma_col3 + matriz[l][c]
+
+soma_linha1 = matriz[0][0] + matriz[0][1] + matriz[0][2]
+soma_linha2 = matriz[1][0] + matriz[1][1] + matriz[1][2]
+soma_linha3 = matriz[2][0] + matriz[2][1] + matriz[2][2]
+
+soma_diag_sec = matriz[0][2] + matriz[1][1] + matriz[2][0]
+
+print("A soma da linha 1 é: ", soma_linha1)
+print("A soma da linha 2 é: ", soma_linha2)
+print("A soma da linha 3 é: ", soma_linha3)
+print("A soma da coluna 1 é: ", soma_col1)
+print("A soma da coluna 2 é: ", soma_col2)
+print("A soma da coluna 3 é: ", soma_col3)
+print("A soma da diagonal principal é: ", soma_diag_pr)
+print("A soma da diagonal secundária é: ", soma_diag_sec)
+
+if soma_linha1 == 15 and soma_linha2 == 15 and soma_linha3 == 15 and soma_col1 == 15 and soma_col2 == 15 and soma_col3 == 15 and soma_diag_pr == 15 and soma_diag_sec == 15:
+  print("É um quadrado mágico!")
+else:
+  print("Não é um quadrado perfeito.")
