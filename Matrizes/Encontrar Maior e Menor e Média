@@ -1,0 +1,47 @@
+#Monte a matriz que receba a idade de grupo de pessoas e identifique as seguintes informações:
+#a) A pessoa mais jovem e mais velha do grupo
+#b) Imprimir os elementos onde o indice da linha for igual o da coluna.
+#c) Calcular a média das idades e guardar em segundo vetor aqueles que estiverem acima da média.
+
+soma_idade = 0
+linha = int(input("Digite a quantidade de linhas da matriz \t"))
+coluna = int(input("Digite a quantidade de colunas da matriz \t"))
+qtd_idade = linha*coluna
+
+matriz = [0] * linha
+
+for l in range(len(matriz)):
+  matriz[l] = [0] * coluna
+
+mais_novo = 130
+mais_velho = matriz[0][0]
+
+for l in range(len(matriz)):
+  for c in range(len(matriz[l])):
+    matriz[l][c] = int(input("Digite a idade:\t"))
+    soma_idade = soma_idade + matriz[l][c]
+    if matriz[l][c] < mais_novo:
+     mais_novo = matriz[l][c]
+    if matriz[l][c] > mais_velho:
+     mais_velho = matriz[l][c]
+
+for l in range(len(matriz)):
+ print(matriz[l])
+
+print("A idade do mais novo é:", mais_novo)
+print("A idade do mais velho é:", mais_velho)
+
+media_idade = soma_idade/qtd_idade
+print("A média das idades é:", media_idade)
+
+for l in range(len(matriz)):
+  for c in range(len(matriz[l])):
+    if matriz[l][c] > media_idade:
+      acima_media = matriz[l][c]
+      print("As idades que estão acima da média são:\t", acima_media)
+
+for l in range(len(matriz)):
+  for c in range(len(matriz[l])):
+    if l == c:
+      indices_iguais = matriz[l][c]
+      print("Os elementos que tem o índice da linha igual ao da coluna são:", indices_iguais)
