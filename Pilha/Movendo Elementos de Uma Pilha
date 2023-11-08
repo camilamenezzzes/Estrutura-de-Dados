@@ -1,0 +1,17 @@
+def main():
+
+  seq = [11,22,33,44,55,66,77]
+  pilha = []
+  pilha_aux= []
+
+  for elemento in seq:
+    pilha.append(elemento)
+    print(pilha)
+  while len(pilha) > 0:
+    topo = pilha.pop()
+    pilha_aux.append(topo)
+    print("Objeto do topo: ", topo)
+    print(pilha)
+    print(pilha_aux)
+
+main()
