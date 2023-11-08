@@ -1,0 +1,12 @@
+#Dada a matriz abaixo implemente procedimento que imprima a seguinte matriz:
+
+linha_1 = [8, 0, 7]
+linha_2 = [4, 5, 6]
+linha_3 = [3, 10, 2]
+
+matriz = [linha_1,
+          linha_2,
+          linha_3]
+
+for l in range(len(matriz)):
+         print(matriz[l])
