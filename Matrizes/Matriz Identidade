@@ -1,0 +1,26 @@
+#Faça uma função que aloca uma matriz m × m (quadrada) e preenche com 1 sua diagonal principal e
+#com 0 os demais elementos (matriz identidade). Sua função deve receber o valor de m.
+
+from random import randint
+
+linha = int(input("Qual a quantidade de linhas?"))
+coluna = int(input("Qual a quantidade de colunas?"))
+while linha != coluna:
+  print("A quantidade de linhas precisa ser igual a de colunas")
+  linha = int(input("Qual a quantidade de linhas?"))
+  coluna = int(input("Qual a quantidade de colunas?"))
+
+matriz = [0] * linha
+
+for l in range(len(matriz)):
+  matriz[l] = [0] * coluna
+
+for l in range(len(matriz)):
+  for c in range(len(matriz[l])):
+    if l == c:
+       matriz[l][c] = 1
+    else:
+       matriz[l][c] = 0
+
+for l in range(len(matriz)):
+  print(matriz[l])
